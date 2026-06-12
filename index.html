@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link rel="icon" href="/Favicon.png" sizes="32x32">
 <link rel="shortcut icon" href="/Favicon.png">
@@ -17,79 +16,58 @@ body{
     line-height:1.6;
 }
 
-/* Top Bar */
-
-nav{
-    background:#b00000;
-    padding:15px 20px;
-    display:flex;
-    align-items:center;
+header{
+    background:#d50000;
+    color:white;
+    text-align:center;
+    padding:30px 20px;
+    position:relative;
 }
 
 .menu-icon{
+    position:absolute;
+    top:20px;
+    left:20px;
     color:white;
     font-size:34px;
     cursor:pointer;
     font-weight:bold;
 }
 
-/* Side Menu */
-
-.mobile-menu{
-    position:fixed;
-    top:0;
-    left:-280px;
-    width:280px;
+.side-menu{
     height:100%;
+    width:0;
+    position:fixed;
+    z-index:1000;
+    top:0;
+    left:0;
     background:white;
-    z-index:9999;
+    overflow-x:hidden;
     transition:0.3s;
+    padding-top:60px;
     box-shadow:2px 0 10px rgba(0,0,0,0.3);
 }
 
-.mobile-menu a{
-    display:block;
-    padding:20px;
-    color:#333;
+.side-menu a{
+    padding:15px 30px;
     text-decoration:none;
-    font-size:18px;
-    font-weight:bold;
-    border-bottom:1px solid #eee;
+    font-size:20px;
+    color:#333;
+    display:block;
+}
+
+.side-menu a:hover{
+    background:#f2f2f2;
 }
 
 .close-btn{
-    text-align:right;
-    padding:20px;
-    font-size:32px;
+    position:absolute;
+    top:10px;
+    right:20px;
+    font-size:35px;
+    color:#d50000;
     cursor:pointer;
 }
-
-/* Header */
-
-header{
-    background:#d50000;
-    color:white;
-    text-align:center;
-    padding:30px 20px;
-}
-
-header img{
-    max-width:800px;
-    width:95%;
-    height:auto;
-}
-
-.btn{
-    display:inline-block;
-    background:white;
-    color:#d50000;
-    padding:12px 25px;
-    text-decoration:none;
-    border-radius:5px;
-    font-weight:bold;
-}
-
-/* Sections */
 
 section{
     padding:50px 20px;
@@ -109,7 +87,15 @@ section{
     border-radius:8px;
 }
 
-/* Footer */
+.btn{
+    display:inline-block;
+    background:white;
+    color:#d50000;
+    padding:12px 25px;
+    text-decoration:none;
+    border-radius:5px;
+    font-weight:bold;
+}
 
 footer{
     background:#222;
@@ -123,23 +109,23 @@ footer{
 
 <body>
 
-<div id="mobileMenu" class="mobile-menu">
+<div id="menu" class="side-menu">
 
-    <div class="close-btn" onclick="closeMenu()">✕</div>
+<span class="close-btn" onclick="closeMenu()">&times;</span>
 
-    <a href="#about" onclick="closeMenu()">About</a>
-    <a href="#products" onclick="closeMenu()">Products</a>
-    <a href="#contact" onclick="closeMenu()">Contact</a>
+<a href="#about" onclick="closeMenu()">About</a>
+<a href="#products" onclick="closeMenu()">Products</a>
+<a href="#contact" onclick="closeMenu()">Contact</a>
 
 </div>
 
-<nav>
-    <div class="menu-icon" onclick="openMenu()">☰</div>
-</nav>
-
 <header>
 
-<img src="HELVIX%20LOGO.png" alt="HELVIX Logo">
+<div class="menu-icon" onclick="openMenu()">☰</div>
+
+<img src="HELVIX%20LOGO.png"
+alt="HELVIX Logo"
+style="max-width:800px;width:95%;height:auto;">
 
 <h2>HELVIX INDUSTRIES</h2>
 
@@ -152,9 +138,10 @@ footer{
 <h2>About</h2>
 
 <p>
-HELVIX Industries develops high-performance anchoring adhesives,
+Helvix Industries develops high-performance anchoring adhesives,
 epoxy systems and construction chemical solutions engineered for
-strength, durability and reliability in demanding construction applications.
+superior strength, durability and reliability in demanding
+construction applications.
 </p>
 
 </section>
@@ -189,24 +176,27 @@ strength, durability and reliability in demanding construction applications.
 <h2>Contact Us</h2>
 
 <p><strong>HELVIX</strong></p>
+
 <p>Email: info@helvixindustries.com</p>
+
 <p>Phone: +91 XXXXXXXXXX</p>
+
 <p>India</p>
 
 </section>
 
 <footer>
-© 2026 HELVIX Industries. HELVIX is a trademark of HELVIX Corporation. All Rights Reserved.
+© 2026 Helvix Industries. Helvix is a Trademark of Helvix Corporation. All Rights Reserved.
 </footer>
 
 <script>
 
 function openMenu(){
-    document.getElementById("mobileMenu").style.left = "0";
+    document.getElementById("menu").style.width="280px";
 }
 
 function closeMenu(){
-    document.getElementById("mobileMenu").style.left = "-280px";
+    document.getElementById("menu").style.width="0";
 }
 
 </script>
