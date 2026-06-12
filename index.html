@@ -1,46 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta charset="UTF-8">
-   <link rel="icon" href="/Favicon.png" sizes="32x32">
-<link rel="shortcut icon" href="/Favicon.png">
-<title>HELVIX INDUSTRIES</title>
-<style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" href="/Favicon.png" sizes="32x32">
+<link rel="shortcut icon" href="/Favicon.png"><title>HELVIX INDUSTRIES</title><style>
 body{
     margin:0;
     font-family:Arial,sans-serif;
     line-height:1.6;
 }
+
+nav{
+    background:#b00000;
+    padding:15px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
+}
+
 header{
     background:#d50000;
     color:white;
     text-align:center;
-    padding:20px 20px;
+    padding:20px;
 }
+
 section{
     padding:50px 20px;
     max-width:1000px;
     margin:auto;
 }
+
 h1,h2{
     margin-bottom:15px;
 }
+
 .products{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:20px;
 }
+
 .card{
     border:1px solid #ddd;
     padding:20px;
     border-radius:8px;
 }
+
 footer{
     background:#222;
     color:white;
     text-align:center;
     padding:20px;
 }
+
 .btn{
     display:inline-block;
     background:white;
@@ -50,57 +67,48 @@ footer{
     border-radius:5px;
     font-weight:bold;
 }
-</style>
-</head>
-<body>
-
-<header>
-<img src="HELVIX%20LOGO.png" alt="HELVIX Logo" style="max-width:800px;width:95%;height:auto;">
+</style></head><body><nav>
+    <a href="#about">About</a>
+    <a href="#products">Products</a>
+    <a href="#contact">Contact</a>
+</nav><header>
+    <img src="HELVIX%20LOGO.png" alt="HELVIX Logo" style="max-width:800px;width:95%;height:auto;">
     <p>HELVIX INDUSTRIES</p>
     <a href="#contact" class="btn">Contact Us</a>
-</header>
-
-<section>
+</header><section id="about">
     <h2>About</h2>
     <p>
-    Helvix Industries develops high-performance anchoring adhensives, epoxy systems,
-        and construction chemical solutions engineered for superior strenght, 
-        durability and reliability in demanding construction applications.
-    
+        Helvix Industries develops high-performance anchoring adhesives, epoxy systems,
+        and construction chemical solutions engineered for superior strength,
+        durability, and reliability in demanding construction applications.
     </p>
-</section>
+</section><section id="products">
+    <h2>Our Products</h2><div class="products">
 
-<section>
-    <h2>Our Products</h2>
-    <div class="products">
-        <div class="card">
-            <h3>Chemical Anchor</h3>
-            <p>High-strength epoxy anchoring system for concrete and masonry.</p>
-        </div>
-
-        <div class="card">
-            <h3>Injection Resin</h3>
-            <p>Reliable bonding and load transfer for critical applications.</p>
-        </div>
-
-        <div class="card">
-            <h3>Construction Chemicals</h3>
-            <p>Engineered solutions for demanding construction environments.</p>
-        </div>
+    <div class="card">
+        <h3>Chemical Anchor</h3>
+        <p>High-strength epoxy anchoring system for concrete and masonry.</p>
     </div>
-</section>
 
-<section id="contact">
-    <h2>Contact Us</h2>
-    <p><strong>HELVIX</strong></p>
-    <p>Email: info@helvixindustries.com</p>
-    <p>Phone: +91 XXXXXXXXXX</p>
-    <p>India</p>
-</section>
+    <div class="card">
+        <h3>Injection Resin</h3>
+        <p>Reliable bonding and load transfer for critical applications.</p>
+    </div>
 
-<footer>
-    © 2026 Helvix Industries. Helvix is a Trademark of Helvix Corporation. All Rights Reserved.
-</footer>
+    <div class="card">
+        <h3>Construction Chemicals</h3>
+        <p>Engineered solutions for demanding construction environments.</p>
+    </div>
 
-</body>
+</div>
+
+</section><section id="contact">
+    <h2>Contact Us</h2><p><strong>HELVIX</strong></p>
+<p>Email: info@helvixindustries.com</p>
+<p>Phone: +91 XXXXXXXXXX</p>
+<p>India</p>
+
+</section><footer>
+    © 2026 Helvix Industries. HELVIX is a trademark of HELVIX Corporation. All Rights Reserved.
+</footer></body>
 </html>
