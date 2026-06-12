@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link rel="icon" href="/Favicon.png" sizes="32x32">
 <link rel="shortcut icon" href="/Favicon.png">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>HELVIX INDUSTRIES</title>
 
 <style>
+
 body{
     margin:0;
     font-family:Arial,sans-serif;
@@ -18,12 +18,13 @@ body{
 }
 
 /* Top Navigation */
+
 nav{
     background:#b00000;
+    padding:15px 25px;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:15px 40px;
 }
 
 .nav-left{
@@ -34,12 +35,14 @@ nav{
 
 .nav-right{
     display:flex;
-    gap:25px;
+    align-items:center;
 }
 
-nav img{
-    height:32px;
-    width:auto;
+.menu-icon{
+    color:white;
+    font-size:32px;
+    font-weight:bold;
+    cursor:pointer;
 }
 
 nav a{
@@ -49,6 +52,7 @@ nav a{
 }
 
 /* Header */
+
 header{
     background:#d50000;
     color:white;
@@ -73,6 +77,7 @@ header img{
 }
 
 /* Sections */
+
 section{
     padding:50px 20px;
     max-width:1000px;
@@ -92,6 +97,7 @@ section{
 }
 
 /* Footer */
+
 footer{
     background:#222;
     color:white;
@@ -100,14 +106,14 @@ footer{
 }
 
 /* Mobile */
+
 @media(max-width:768px){
 
     nav{
-        padding:15px 20px;
+        padding:15px;
     }
 
-    .nav-left,
-    .nav-right{
+    .nav-left{
         gap:15px;
     }
 
@@ -119,6 +125,7 @@ footer{
         width:100%;
     }
 }
+
 </style>
 </head>
 
@@ -126,7 +133,7 @@ footer{
 
 <nav>
     <div class="nav-left">
-        <img src="Favicon.png" alt="HELVIX">
+        <div class="menu-icon">☰</div>
         <a href="#about">About</a>
         <a href="#products">Products</a>
     </div>
@@ -137,58 +144,65 @@ footer{
 </nav>
 
 <header>
-    <img src="HELVIX%20LOGO.png" alt="HELVIX Logo">
 
-    <h2>HELVIX INDUSTRIES</h2>
+<img src="HELVIX%20LOGO.png" alt="HELVIX Logo">
 
-    <a href="#contact" class="btn">Contact Us</a>
+<h2>HELVIX INDUSTRIES</h2>
+
+<a href="#contact" class="btn">Contact Us</a>
+
 </header>
 
 <section id="about">
-    <h2>About</h2>
 
-    <p>
-        HELVIX Industries develops high-performance anchoring adhesives,
-        epoxy systems and construction chemical solutions engineered for
-        strength, durability and reliability in demanding construction
-        applications.
-    </p>
+<h2>About</h2>
+
+<p>
+HELVIX Industries develops high-performance anchoring adhesives,
+epoxy systems and construction chemical solutions engineered for
+strength, durability and reliability in demanding construction applications.
+</p>
+
 </section>
 
 <section id="products">
-    <h2>Our Products</h2>
 
-    <div class="products">
+<h2>Our Products</h2>
 
-        <div class="card">
-            <h3>Chemical Anchor</h3>
-            <p>High-strength epoxy anchoring system for concrete and masonry.</p>
-        </div>
+<div class="products">
 
-        <div class="card">
-            <h3>Injection Resin</h3>
-            <p>Reliable bonding and load transfer for critical applications.</p>
-        </div>
+<div class="card">
+<h3>Chemical Anchor</h3>
+<p>High-strength epoxy anchoring system for concrete and masonry.</p>
+</div>
 
-        <div class="card">
-            <h3>Construction Chemicals</h3>
-            <p>Engineered solutions for demanding construction environments.</p>
-        </div>
+<div class="card">
+<h3>Injection Resin</h3>
+<p>Reliable bonding and load transfer for critical applications.</p>
+</div>
 
-    </div>
+<div class="card">
+<h3>Construction Chemicals</h3>
+<p>Engineered solutions for demanding construction environments.</p>
+</div>
+
+</div>
+
 </section>
 
 <section id="contact">
-    <h2>Contact Us</h2>
 
-    <p><strong>HELVIX</strong></p>
-    <p>Email: info@helvixindustries.com</p>
-    <p>Phone: +91 XXXXXXXXXX</p>
-    <p>India</p>
+<h2>Contact Us</h2>
+
+<p><strong>HELVIX</strong></p>
+<p>Email: info@helvixindustries.com</p>
+<p>Phone: +91 XXXXXXXXXX</p>
+<p>India</p>
+
 </section>
 
 <footer>
-    © 2026 HELVIX Industries. HELVIX is a trademark of HELVIX Corporation. All Rights Reserved.
+© 2026 HELVIX Industries. HELVIX is a trademark of HELVIX Corporation. All Rights Reserved.
 </footer>
 
 </body>
