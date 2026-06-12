@@ -17,38 +17,58 @@ body{
     line-height:1.6;
 }
 
-/* Top Navigation */
+/* Top Bar */
 
 nav{
     background:#b00000;
-    padding:15px 25px;
+    padding:15px 20px;
     display:flex;
     justify-content:space-between;
     align-items:center;
 }
 
-.nav-left{
-    display:flex;
-    align-items:center;
-    gap:25px;
-}
-
-.nav-right{
-    display:flex;
-    align-items:center;
-}
-
 .menu-icon{
     color:white;
-    font-size:32px;
-    font-weight:bold;
+    font-size:34px;
     cursor:pointer;
+    font-weight:bold;
 }
 
-nav a{
+.nav-right a{
     color:white;
     text-decoration:none;
     font-weight:bold;
+}
+
+/* Side Menu */
+
+.mobile-menu{
+    position:fixed;
+    top:0;
+    left:-280px;
+    width:280px;
+    height:100%;
+    background:white;
+    z-index:9999;
+    transition:0.3s;
+    box-shadow:2px 0 10px rgba(0,0,0,0.3);
+}
+
+.mobile-menu a{
+    display:block;
+    padding:20px;
+    color:#333;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:bold;
+    border-bottom:1px solid #eee;
+}
+
+.close-btn{
+    text-align:right;
+    padding:20px;
+    font-size:32px;
+    cursor:pointer;
 }
 
 /* Header */
@@ -105,42 +125,29 @@ footer{
     padding:20px;
 }
 
-/* Mobile */
-
-@media(max-width:768px){
-
-    nav{
-        padding:15px;
-    }
-
-    .nav-left{
-        gap:15px;
-    }
-
-    nav a{
-        font-size:14px;
-    }
-
-    header img{
-        width:100%;
-    }
-}
-
 </style>
 </head>
 
 <body>
 
+<div id="mobileMenu" class="mobile-menu">
+
+    <div class="close-btn" onclick="closeMenu()">✕</div>
+
+    <a href="#about" onclick="closeMenu()">About</a>
+    <a href="#products" onclick="closeMenu()">Products</a>
+    <a href="#contact" onclick="closeMenu()">Contact</a>
+
+</div>
+
 <nav>
-    <div class="nav-left">
-        <div class="menu-icon">☰</div>
-        <a href="#about">About</a>
-        <a href="#products">Products</a>
-    </div>
+
+    <div class="menu-icon" onclick="openMenu()">☰</div>
 
     <div class="nav-right">
         <a href="#contact">Contact</a>
     </div>
+
 </nav>
 
 <header>
@@ -204,6 +211,18 @@ strength, durability and reliability in demanding construction applications.
 <footer>
 © 2026 HELVIX Industries. HELVIX is a trademark of HELVIX Corporation. All Rights Reserved.
 </footer>
+
+<script>
+
+function openMenu(){
+    document.getElementById("mobileMenu").style.left = "0";
+}
+
+function closeMenu(){
+    document.getElementById("mobileMenu").style.left = "-280px";
+}
+
+</script>
 
 </body>
 </html>
